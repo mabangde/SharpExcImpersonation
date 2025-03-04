@@ -16,7 +16,7 @@
 执行 `New-ManagementRoleAssignment -Name "ImpersonationRole" -Role "ApplicationImpersonation" -User "serviceAccount"`并监控LDAP改动信息，使用ldap工具复制已经具有`ApplicationImpersonation`权限用户的相关LDAP信息。这样就能达到添加`ApplicationImpersonation ` 权限的目的。
 
 ### 关键点：
-** 修改 Active Directory 中的对象属性 **
+#### 修改 Active Directory 中的对象属性 
 msExchRoleAssignment 对象：在 Active Directory 中创建一个新的 `msExchRoleAssignment` 对象，该对象链接到要授予` ApplicationImpersonation` 角色的用户。
 ● msExchRoleLink：此属性指定与角色分配关联的管理角色（即`ApplicationImpersonation` ）。
 ● msExchUserLink：此属性指定将被授权执行操作的用户或服务帐户的 DN。
