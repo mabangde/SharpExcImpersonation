@@ -61,8 +61,10 @@ New-ManagementRoleAssignment -Name "ImpersonationRole" -Role "ApplicationImperso
 `Get-ManagementRole -Identity "ApplicationImpersonation" | Get-ManagementRoleEntry`
 
 #### 其它
-**LDAP 监控工具** https://github.com/p0dalirius/LDAPmonitor
+**LDAP 监控工具** : https://github.com/p0dalirius/LDAPmonitor
 **Exchange 中 ApplicationImpersonation 权限详解**
+
+
 > ApplicationImpersonation 是 Exchange Server 中的一种角色，授予拥有该角色的用户或服务帐户代表其他用户访问邮箱的能力。这在开发应用程序时非常有用，比如需要访问多个用户的邮箱以进行自动化处理、邮件归档或数据分析等。
 
 
