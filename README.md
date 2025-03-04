@@ -62,6 +62,7 @@ New-ManagementRoleAssignment -Name "ImpersonationRole" -Role "ApplicationImperso
 
 #### 其它
 **LDAP 监控工具** : https://github.com/p0dalirius/LDAPmonitor
+
 **Exchange 中 ApplicationImpersonation 权限详解**
 
 
