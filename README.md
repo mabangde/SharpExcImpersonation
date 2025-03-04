@@ -1,0 +1,2 @@
+# SharpExcImpersonation
+基于ldap添加ApplicationImpersonation权限
