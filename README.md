@@ -17,11 +17,11 @@
 
 ### 关键点：
 #### 修改 Active Directory 中的对象属性 
-msExchRoleAssignment 对象：在 Active Directory 中创建一个新的 `msExchRoleAssignment` 对象，该对象链接到要授予` ApplicationImpersonation` 角色的用户。
-● msExchRoleLink：此属性指定与角色分配关联的管理角色（即`ApplicationImpersonation` ）。
-● msExchUserLink：此属性指定将被授权执行操作的用户或服务帐户的 DN。
-● msExchRoleAssignmentFlags：这是一个标志，用于指定角色分配的行为和特性。
-● msExchVersion：指定 Exchange 对象的版本信息。
+>msExchRoleAssignment 对象：在 Active Directory 中创建一个新的 `msExchRoleAssignment` 对象，该对象链接到要授予` ApplicationImpersonation` 角色的用户。
+- msExchRoleLink：此属性指定与角色分配关联的管理角色（即`ApplicationImpersonation` ）。
+- msExchUserLink：此属性指定将被授权执行操作的用户或服务帐户的 DN。
+- msExchRoleAssignmentFlags：这是一个标志，用于指定角色分配的行为和特性。
+- msExchVersion：指定 Exchange 对象的版本信息。
 
 ![image](https://github.com/user-attachments/assets/30f6001e-8107-4be2-92f5-287889b84325)
 
@@ -30,9 +30,9 @@ msExchRoleAssignment 对象：在 Active Directory 中创建一个新的 `msExch
 ![image](https://github.com/user-attachments/assets/0f722804-c47d-48e1-9f2b-040a6e6a2cea)
 
 
-LDAP 监控工具：https://github.com/p0dalirius/LDAPmonitor
-Exchange 中 ApplicationImpersonation 权限详解
-ApplicationImpersonation 是 Exchange Server 中的一种角色，授予拥有该角色的用户或服务帐户代表其他用户访问邮箱的能力。这在开发应用程序时非常有用，比如需要访问多个用户的邮箱以进行自动化处理、邮件归档或数据分析等。
+**LDAP 监控工具** https://github.com/p0dalirius/LDAPmonitor
+**Exchange 中 ApplicationImpersonation 权限详解**
+> ApplicationImpersonation 是 Exchange Server 中的一种角色，授予拥有该角色的用户或服务帐户代表其他用户访问邮箱的能力。这在开发应用程序时非常有用，比如需要访问多个用户的邮箱以进行自动化处理、邮件归档或数据分析等。
 ## 0x02 代码实现
 使用工具操作太过繁琐，也不优雅
 注意事项：
