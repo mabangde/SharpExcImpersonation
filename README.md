@@ -30,11 +30,9 @@
 ![image](https://github.com/user-attachments/assets/0f722804-c47d-48e1-9f2b-040a6e6a2cea)
 
 
-**LDAP 监控工具** https://github.com/p0dalirius/LDAPmonitor
-**Exchange 中 ApplicationImpersonation 权限详解**
-> ApplicationImpersonation 是 Exchange Server 中的一种角色，授予拥有该角色的用户或服务帐户代表其他用户访问邮箱的能力。这在开发应用程序时非常有用，比如需要访问多个用户的邮箱以进行自动化处理、邮件归档或数据分析等。
-## 0x02 代码实现
-使用工具操作太过繁琐，也不优雅
+
+## 0x02 开发遇到坑点
+
 注意事项：
 1. 确保键值一致
 2. 确保数据类型一定要对
@@ -42,6 +40,30 @@
 ![image](https://github.com/user-attachments/assets/1060ebc2-4de6-4412-9fbf-8a0891091e12)
 ![image](https://github.com/user-attachments/assets/46167a2c-db08-4802-9ac9-7704b3acae1c)
 
+
+### 0x03 附录
+#### 常用的 Exchange PowerShell 命令
+
+1. 分配 ApplicationImpersonation 角色：
+New-ManagementRoleAssignment -Name "ImpersonationRole" -Role "ApplicationImpersonation" -User "zhangsan"
+
+2. 查看角色分配：
+`Get-ManagementRoleAssignment -Role "ApplicationImpersonation"`
+
+3. 查看用户的角色分配：
+`Get-ManagementRoleAssignment -RoleAssignee "zhangsan"`
+
+4. 删除角色分配：
+`Remove-ManagementRoleAssignment -Identity "ImpersonationRole"`
+
+5. 获取角色权限列表：
+
+`Get-ManagementRole -Identity "ApplicationImpersonation" | Get-ManagementRoleEntry`
+
+#### 其它
+**LDAP 监控工具** https://github.com/p0dalirius/LDAPmonitor
+**Exchange 中 ApplicationImpersonation 权限详解**
+> ApplicationImpersonation 是 Exchange Server 中的一种角色，授予拥有该角色的用户或服务帐户代表其他用户访问邮箱的能力。这在开发应用程序时非常有用，比如需要访问多个用户的邮箱以进行自动化处理、邮件归档或数据分析等。
 
 
 
